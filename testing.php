@@ -7,12 +7,34 @@ require("algorithm.php");
 $createCnt = 10;
 $randNums  = makeRandNums($createCnt);
 
+echo "<pre>";
+
+echo "--------------------------------　";
+echo "ソート前";
+echo "<br>";
+var_dump($randNums);
+
+
  // バブルソート
-$bubblesortArr = bubbleSort($randNums);
-;
+ echo "--------------------------------　";
+echo "バブルソート";
+echo "<br>";
+var_dump(bubbleSort($randNums));
 
 
+// 選択ソート
+echo "--------------------------------　";
+echo "選択ソート";
+echo "<br>";
+var_dump(selectSort($randNums));
 
+
+// クイックソート
+echo "--------------------------------　";
+echo "クイックソート";
+echo "<br>";
+$listCount = count($randNums);
+var_dump(quickSort($randNums, 0, $listCount-1));
 
 
 
